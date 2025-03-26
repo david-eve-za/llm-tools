@@ -100,17 +100,16 @@
 						<goals>
 							<goal>npm</goal>
 						</goals>
-						<configuration>
-							<arguments>install</arguments>
-						</configuration>
 					</execution>
 					<execution>
-						<id>npm run build</id>
+						<id>webapp build dev</id>
 						<goals>
 							<goal>npm</goal>
 						</goals>
+						<phase>generate-resources</phase>
 						<configuration>
-							<arguments>run build</arguments>
+							<arguments>run webapp:build</arguments>
+							<npmInheritsProxyConfigFromMaven>false</npmInheritsProxyConfigFromMaven>
 						</configuration>
 					</execution>
 				</executions>
